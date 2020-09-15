@@ -3,7 +3,7 @@
 
 
 def is_even_len(string: str) -> bool:
-    if len(str) % 2 == 0:
+    if len(string) % 2 == 0:
         return true
     pass
 
@@ -14,7 +14,7 @@ def remove_third_char(string: str) -> str:
 
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
-    
+
     pass
 
 
