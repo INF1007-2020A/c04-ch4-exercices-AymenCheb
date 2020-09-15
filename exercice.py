@@ -35,7 +35,7 @@ def get_number_of_words(sentence: str, word: str) -> int:
     occurences = 0
     splited_sentence = sentence.split()
     for i in range(0, splited_sentence):
-        if splited_sentence[i] == word
+        if splited_sentence[i] == word:
         occurences += 1
     pass
 
