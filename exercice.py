@@ -9,7 +9,7 @@ def is_even_len(string: str) -> bool:
 
 
 def remove_third_char(string: str) -> str:
-    string = string[:2] + string[4:]
+    string = string[:2] + string[3:]
     return string
     pass
 
