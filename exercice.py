@@ -19,7 +19,7 @@ def replace_char(string: str, old_char: str, new_char: str) -> str:
         if string[i] == old_char:
             string = string[:i-1] + new_char + string[i+1:]
     return string
-    pass
+
 
 
 def get_number_of_char(string: str, char: str) -> int:
@@ -28,7 +28,7 @@ def get_number_of_char(string: str, char: str) -> int:
         if string[i] == char:
             occurences += 1
     return occurences
-    pass
+
 
 
 def get_number_of_words(sentence: str, word: str) -> int:
@@ -38,7 +38,7 @@ def get_number_of_words(sentence: str, word: str) -> int:
         if splited_sentence[i] == word:
             occurences += 1
     return occurences
-    pass
+
 
 
 def main() -> None:
