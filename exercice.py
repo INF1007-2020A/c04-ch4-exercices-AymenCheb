@@ -34,7 +34,7 @@ def get_number_of_char(string: str, char: str) -> int:
 def get_number_of_words(sentence: str, word: str) -> int:
     occurences = 0
     splited_sentence = sentence.split()
-    for i in range(0, splited_sentence):
+    for i in range(0, len(splited_sentence) -1):
         if splited_sentence[i] == word:
             occurences += 1
     return occurences
