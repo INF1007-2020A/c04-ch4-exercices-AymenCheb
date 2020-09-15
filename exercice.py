@@ -15,7 +15,8 @@ def remove_third_char(string: str) -> str:
 
 def replace_char(string: str, old_char: str, new_char: str) -> str:
     for i in range(0, string):
-        if string[i] == old
+        if string[i] == old_char
+            string = 
     pass
 
 
