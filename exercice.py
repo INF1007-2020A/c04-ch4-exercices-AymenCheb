@@ -33,7 +33,7 @@ def get_number_of_char(string: str, char: str) -> int:
 
 def get_number_of_words(sentence: str, word: str) -> int:
     splited_sentence = sentence.split()
-    for i
+    for i in range(0, splited_sentence):
     pass
 
 
