@@ -2,62 +2,77 @@
 # -*- coding: utf-8 -*-
 
 
-def is_even_len(string: str) -> bool:
-    if len(string) % 2 == 0:
-        return True
-    else:
-        return False
+from typing import List
 
-def remove_third_char(string: str) -> str:
-    string = string[:2] + string[3:]
-    return string
+
+def convert_to_absolute(number: float) -> float:
+    if number < 0 :
+        return(-number)
+    else:
+        print(number)
+        return number
+
+
+def use_prefixes() -> List[str]:
+    prefixes, suffixe = 'JKLMNOPQ', 'ack'
+    name_list=[]
+    for i in prefixes:
+        name = i + suffixe
+        name_list.append(name)
+    return name_list
+
+
+def prime_integer_summation() -> int:
+    i = 0
+    somme = 0
+    c = 1
+    while i != 100:
+        c += 1
+        for j in range(1, c, 1):
+            if (c // j) == 0:
+                break
+            if j == c:
+                somme += c
+                i += 1
+                print(i)
+
+
+    return somme
+
+
+def factorial(number: int) -> int:
+    return 0
+
+
+def use_continue() -> None:
     pass
 
 
-def replace_char(string: str, old_char: str, new_char: str) -> str:
-    for i in range(0, len(string)-1):
-        if string[i] == old_char:
-            string = string[:i-1] + new_char + string[i+1:]
-    return string
-
-
-
-def get_number_of_char(string: str, char: str) -> int:
-    occurences = 0
-    for i in range(0, len(string)-1):
-        if string[i] == char:
-            occurences += 1
-    return occurences
-
-
-
-def get_number_of_words(sentence: str, word: str) -> int:
-    occurences = 0
-    splited_sentence = sentence.split()
-    for i in range(0, len(splited_sentence)):
-        if splited_sentence[i] == word:
-            occurences += 1
-    return occurences
-
+def verify_ages(groups: List[List[int]]) -> List[bool]:
+    return []
 
 
 def main() -> None:
-    chaine = "Bonjour!"
-    if is_even_len(chaine):
-        print(f"Le nombre de caractère dans la chaine {chaine} est pair")
-    else:
-        print(f"Le nombre de caractère dans la chaine {chaine} est impair")
+    number = -4.325
+    print(f"La valeur absolue du nombre {number} est {convert_to_absolute(number)}")
 
-    chaine = "salut monde!"
-    print(f"On supprime le 3e caratère dans la chaine: {chaine}. Résultat : {remove_third_char(chaine)}")
+    print(f"La liste des noms générés avec les préfixes est: {use_prefixes()}")
 
-    chaine = "hello world!"
-    print(f"On remplace le caratère w par le caractère z dans la chaine: {chaine}. Résultat : {replace_char(chaine, 'w', 'z')}")
+    print(f"La somme des 100 premiers nombre premier est : {prime_integer_summation()}")
 
-    print(f"Le nombre d'occurrence de l dans hello world est : {get_number_of_char(chaine, 'l')}")
+    number = 10
+    print(f"La factiorelle du nombre {number} est: {factorial(number)}")
     
-    chaine = "Baby shark doo doo doo doo doo doo"
-    print(f"L'occurence du mot doo dans la chaine {chaine} est: {get_number_of_words(chaine, 'doo')}")
+    print(f"L'affichage de la boucle est:")
+    use_continue()
+
+    groups = [
+        [15, 28, 65, 70, 72], [18, 24, 22, 50, 70], [25, 2],
+              [20, 22, 23, 24, 18, 75, 51, 49, 100, 18, 20, 20], [70, 50, 26, 28], [75, 50, 18, 25],
+              [13, 25, 80, 15], [20, 30, 40, 50, 60], [75, 50, 100, 28]
+    ]
+    print(f"Les différents groupes sont: {groups}")
+    print(f"L'acceptance des groupes est: {verify_ages(groups)}")
 
 
 if __name__ == '__main__':
